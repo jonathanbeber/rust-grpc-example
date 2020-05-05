@@ -1,0 +1,34 @@
+syntax = "proto3";
+
+package generated;
+
+service Stock {
+  rpc ListItems (StockRequest) returns (StockResponse) {}
+}
+
+enum Store {
+  BERLIN_DE = 0;
+  VENEZA_IT = 1;
+}
+
+enum AvailabilityDescription {
+  UNAVAILABLE = 0;
+  AVAILABLE = 1;
+}
+
+message Item {
+  string name = 1;
+  string brand = 2;
+  string category = 3;
+  int32 quantity = 4;
+  AvailabilityDescription availability_description = 5;
+}
+
+message StockRequest {
+  Store store = 1;
+  bool display_unavailable_items = 2;
+}
+
+message StockResponse {
+  repeated Item items = 1;
+}
