@@ -1,0 +1,25 @@
+[package]
+name = "stock"
+version = "0.1.0"
+authors = ["Jonathan Juares Beber <jonathanbeber@gmail.com>"]
+description = "Rust gRPC example service"
+edition = "2018"
+build = "build.rs"
+
+[build-dependencies]
+protoc-grpcio = "1.1.0"
+
+[dev-dependencies]
+assert_cmd = "0.12.0"
+predicates = "1.0.2"
+
+[dependencies]
+grpcio = "0.4.7"
+futures = "0.1.16"
+protobuf = "2.10.1"
+ctrlc = { version = "3.1.3", features = ["termination"] }
+prettytable-rs = "0.8.0"
+structopt = "0.3.9"
+slog = { version = "2.5.2", features = ["max_level_trace", "release_max_level_trace"] }
+slog-term = "2.4.2"
+slog-async = "2.3.0"
