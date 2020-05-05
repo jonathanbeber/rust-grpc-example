@@ -2,12 +2,11 @@
 
 This repository contains a Rust [gRPC](https://grpc.io/) service and its CLI as a simple implementation example.
 
-It uses the [tikv/grpc-rs](https://github.com/tikv/grpc-rs) crate combined with the [stepancheg/rust-protobuf](https://github.com/stepancheg/rust-protobuf/) create.
+It uses the [tikv/grpc-rs](https://github.com/tikv/grpc-rs) crate combined with the [stepancheg/rust-protobuf](https://github.com/stepancheg/rust-protobuf/).
+
+This code is based on an hiring coding challenge. I removed all the references to the company and its resources.
 
 # Docs
-
-
-This code is based on an interview coding challenge. I removed all the references to the company and its resources.
 
 * The [ADRs](https://labs.spotify.com/2020/04/14/when-should-i-write-an-architecture-decision-record/) used to define the system are in the `docs` path;
 * Run `cargo doc --open` for code documentation. For those using purely docker, unfortunately, this project does not export the docs from the docker image yet but the docker image has `lynx` installed. You can read the docs inside the container with `cargo doc && lynx /usr/src/stock/target/doc/stock/index.html`;
